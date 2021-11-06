@@ -25,7 +25,7 @@ def getUtteranceParameter () :
 def index():
     return 'Hello Flask'
 
-@app.route('/shoppingItems/createItems', methods=['POST'])
+@app.route('/createItems', methods=['POST'])
 def createItems():
 
     utteranceParameter = getUtteranceParameter()
@@ -44,7 +44,7 @@ def createItems():
          shoppingItems.append([utteranceValue, datetime.today().strftime('%Y-%m-%d')])
     return json.dumps(response)
 
-@app.route('/shoppingItems/readItems', methods=['POST'])
+@app.route('/readItems', methods=['POST'])
 def readItems():
 
 
